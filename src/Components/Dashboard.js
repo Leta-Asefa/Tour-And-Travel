@@ -11,7 +11,7 @@ const Dashboard = () => {
                 <nav>
                     <a href="/addsite" className="sidebar-link">Add Sites</a>
                     <a href="/sitelist" className="sidebar-link">View Sites</a>
-                    <a href="#" className="sidebar-link">Add Guide</a>
+                    <a href="/addguide" className="sidebar-link">Add Guide</a>
                     <a href="#" className="sidebar-link">View Books</a>
                     <a href="#" className="sidebar-link">View Book Histories</a>
                 </nav>
@@ -34,12 +34,20 @@ const Dashboard = () => {
                         </div>
                        </div>
                     </a>
-                    <div className="card">
+                   <a href='/addguide'> <div className="card">
                         <div className="card-title">Add Guide</div>
                         <div className="card-body">
                             <p>Add new guides to your team.</p>
                         </div>
-                    </div>
+                   </div>
+                   </a>
+                   <a href='/guidelist'> <div className="card">
+                        <div className="card-title">View Guides</div>
+                        <div className="card-body">
+                            <p>View  Guides from Database.</p>
+                        </div>
+                   </div>
+                   </a>
                     <div className="card">
                         <div className="card-title">View Books</div>
                         <div className="card-body">

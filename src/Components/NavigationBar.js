@@ -8,7 +8,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="navbar-brand">
-                    <Link to="/">BrandName</Link>
+                    <Link to="/">TT-Tour</Link>
                 </div>
                 <ul className="navbar-links">
                     <li>
@@ -24,7 +24,7 @@ const Navbar = () => {
                         <Link to="/contact" className="navbar-link">Contact</Link>
                     </li>
                     <li>
-                        <a herf="http://localhost:4000/auth/logout" className="navbar-link">Logout</a>
+                    <Link to="/logout"className=" bg-white p-3 cursor-pointer text-red-600 rounded-xl hover:bg-slate-100" >Logout</Link>
                     </li>
                 </ul>
             </div>

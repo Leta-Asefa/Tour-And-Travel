@@ -48,7 +48,7 @@ const SiteIntro = () => {
     <div className='site-intro-card'>
       
       {sites.map((site, index) => (
-        <div  key={index} className="text-center  w-52 h-auto hover:border-2 border-black  rounded-xl" >
+        <div  key={index} className="text-center  w-52 h-auto hover:border-2 border-black  rounded-xl p-1" >
           <div>
             <img className='site-intro-image' src={`data:image/jpeg;base64,${site.images}`} alt={`${site.siteName}`} />
           </div>

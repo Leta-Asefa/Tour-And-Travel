@@ -9,6 +9,12 @@ import SiteIntro from './Components/DisplaySites';
 import Login from './Components/Login';
 import AddSite from './Components/AddSites';
 import SiteDetails from './Components/DisplaySiteDetail';
+import AddGuide from './Components/AddGuide';
+import GuideIntro from './Components/DisplayGuides';
+import GuideDetails from './Components/DisplayGuideDetails';
+import Logout from './Components/LogOut';
+import WaitingList from './Components/WaitingListDetails';
+import WaitingListIntro from './Components/DisplayWaitingList';
 function App() {
   return (
     <Router>
@@ -25,6 +31,9 @@ function App() {
             <Route exact path='/login'>
                 <Login/>
             </Route>
+            <Route exact path='/logout'>
+                <Logout/>
+            </Route>
             <Route exact path='/sitelist'>
                 <SiteIntro/>
             </Route>
@@ -34,6 +43,22 @@ function App() {
             <Route exact path='/sitedetails/:siteName'>
                 <SiteDetails />
             </Route>
+            <Route exact path='/addguide'>
+                <AddGuide />
+            </Route>
+            <Route exact path='/guidelist'>
+                <GuideIntro />
+            <Route exact path='/guidedetails/:phoneNumber'>
+                <GuideDetails />
+            </Route>
+            </Route>
+            <Route exact path='/waitingguideslist'>
+                <WaitingListIntro />
+            </Route>
+            <Route exact path='/waitingguide/:phoneNumber'>
+                <WaitingList />
+            </Route>
+            
 
 
           </Switch>

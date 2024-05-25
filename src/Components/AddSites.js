@@ -50,7 +50,6 @@ const AddSite = () => {
     async function uploadImages(files,siteName) {
         try {
             files = Array.from(files)
-            console.log(files)
           const formData = new FormData();
           files.forEach((file, index) => {
             formData.append('images', file);
@@ -62,6 +61,7 @@ const AddSite = () => {
             credentials:'include'
           });
             
+          
             if (!response.ok) {
                 console.log("ERROR")
                 throw new Error('Failed to upload images');
@@ -98,7 +98,7 @@ const AddSite = () => {
       }
       
     
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
          try {
@@ -133,12 +133,17 @@ const AddSite = () => {
              if (!response.ok) {
                 throw new Error('Failed to add site');
             } 
-
-             console.log('Site added successfully!');
-             uploadImages(images, siteName)
-             uploadVideos(videos, siteName)
-             history.push('/sitelist')
-
+             if (response.ok) {
+                 const data = await response.json()
+                 console.log(data)
+                 if (data.error === 'You have no jwt')
+                     history.push('/login')
+             } else {
+                 console.log('Site added successfully!');
+                 uploadImages(images, siteName)
+                 uploadVideos(videos, siteName)
+                 history.push('/sitelist')
+             }
         } catch (error) {
             console.error('Error adding site:', error);
         }

@@ -80,7 +80,7 @@
 /* -----------------------------------------------------Display Sites------------------------------------ */
 
 .site-intro-card {
-  @apply  grid grid-cols-3 gap-2 px-14 py-6;
+  @apply  grid grid-cols-1 md:grid-cols-3 gap-2 px-14 py-6;
   
 }
 
@@ -91,7 +91,7 @@
   @apply  max-h-24 min-h-24 overflow-y-hidden;
 }
 .site-intro-image {
-  @apply  w-72 h-full object-contain rounded-lg;
+  @apply  w-72 min-h-60 max-h-60 h-full object-contain rounded-lg;
 }
 .site-intro-rating {
   @apply  w-40;
@@ -133,6 +133,43 @@
 
 .submit-button {
   @apply bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded;
+}
+/* ---------------------------------------------------------Add Guide------------------------------------------------ */
+
+.tour-guide-form{
+  @apply px-48 py-5;
+}
+
+.input {
+    @apply block w-full p-2 border border-gray-300 rounded;
+}
+
+.add-button {
+    @apply bg-blue-500 text-white px-4 py-2 rounded mt-2;
+}
+
+.remove-button {
+    @apply bg-red-500 text-white px-4 py-2 rounded;
+}
+
+.submit-button {
+    @apply bg-green-500 text-white px-4 py-2 rounded;
+}
+
+.input {
+  @apply block w-full p-2 border border-gray-300 rounded;
+}
+
+.add-button {
+  @apply bg-green-500 text-white px-4 py-2 rounded mt-2;
+}
+
+.remove-button {
+  @apply bg-red-500 text-white px-4 py-2 rounded;
+}
+
+.submit-button {
+  @apply bg-blue-500 text-white px-4 py-2 rounded;
 }
 
 

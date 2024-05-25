@@ -15,59 +15,63 @@ import GuideDetails from './Components/DisplayGuideDetails';
 import Logout from './Components/LogOut';
 import WaitingList from './Components/WaitingListDetails';
 import WaitingListIntro from './Components/DisplayWaitingList';
+import SiteFilter from './Components/SiteFilter';
 function App() {
-  return (
-    <Router>
-      <div className='bg-slate-300 block'>
-        <Navbar/>
-        <div>
-          <Switch>
-          <Route exact path='/'>
-                <Dashboard/>
-            </Route>
-            <Route exact path='/signup'>
-                <Signup/>
-            </Route>
-            <Route exact path='/login'>
-                <Login/>
-            </Route>
-            <Route exact path='/logout'>
-                <Logout/>
-            </Route>
-            <Route exact path='/sitelist'>
-                <SiteIntro/>
-            </Route>
-            <Route exact path='/addsite'>
-                <AddSite/>
-            </Route>
-            <Route exact path='/sitedetails/:siteName'>
-                <SiteDetails />
-            </Route>
-            <Route exact path='/addguide'>
-                <AddGuide />
-            </Route>
-            <Route exact path='/guidelist'>
-                <GuideIntro />
-            <Route exact path='/guidedetails/:phoneNumber'>
-                <GuideDetails />
-            </Route>
-            </Route>
-            <Route exact path='/waitingguideslist'>
-                <WaitingListIntro />
-            </Route>
-            <Route exact path='/waitingguide/:phoneNumber'>
-                <WaitingList />
-            </Route>
-            
+    return (
+        <Router>
+            <div className='bg-slate-300 block'>
+                <Navbar />
+                <div>
+                    <Switch>
+                        <Route exact path='/'>
+                            <Dashboard />
+                        </Route>
+                        <Route exact path='/signup'>
+                            <Signup />
+                        </Route>
+                        <Route exact path='/login'>
+                            <Login />
+                        </Route>
+                        <Route exact path='/logout'>
+                            <Logout />
+                        </Route>
+                        <Route exact path='/sitelist'>
+                            <SiteIntro />
+                        </Route>
+                        <Route exact path='/addsite'>
+                            <AddSite />
+                        </Route>
+                        <Route exact path='/sitedetails/:siteName'>
+                            <SiteDetails />
+                        </Route>
+                        <Route exact path='/addguide'>
+                            <AddGuide />
+                        </Route>
+                        <Route exact path='/guidelist'>
+                            <GuideIntro />
+                            <Route exact path='/guidedetails/:phoneNumber'>
+                                <GuideDetails />
+                            </Route>
+                        </Route>
+                        <Route exact path='/waitingguideslist'>
+                            <WaitingListIntro />
+                        </Route>
+                        <Route exact path='/waitingguide/:phoneNumber'>
+                            <WaitingList />
+                        </Route>
+                        <Route exact path='/sitefilter'>
+                            <SiteFilter />
+                        </Route>
 
 
-          </Switch>
-        </div>
-        <Footer />
-      </div>
-    </Router>
-   
-  );
+
+                    </Switch>
+                </div>
+                <Footer />
+            </div>
+        </Router>
+
+    );
 
 
 }
